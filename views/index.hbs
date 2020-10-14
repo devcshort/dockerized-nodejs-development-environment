@@ -1,0 +1,13 @@
+<form method="POST" action="/comments" style="width: 100%; max-width: 300px;">
+    <textarea
+        name="content"
+        rows="8"
+        placeholder="Hello, world!"
+        style="display: block; box-sizing: border-box; width: 100%; margin-bottom: 1rem;"></textarea>
+    <button style="display: block; box-sizing: border-box; width: 100%;">Create Comment</button>
+</form>
+
+{{#each comments}}
+    <p style="margin-bottom: 0;">{{this.content}}</p>
+    <p style="margin-top: 0;"><small>{{this.createdAt}}</small></p>
+{{/each}}
